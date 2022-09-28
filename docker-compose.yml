@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  uptime-kuma:
+    container_name: uptime-kuma
+    image: louislam/uptime-kuma:1-alpine
+    ports:
+      - '3001:3001'
+    volumes:
+      - uptime-kuma-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  uptime-kuma-data:
+    driver_opts:
+      size: 200Mi
