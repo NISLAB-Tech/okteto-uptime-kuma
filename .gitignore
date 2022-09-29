@@ -1,0 +1,3 @@
+# Do not commit .env file
+# Copy the ./vars/.env.example to ./vars/.env before using the redeploy script
+/vars/.env
